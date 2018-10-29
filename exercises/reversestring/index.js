@@ -6,6 +6,19 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+
+/* 
+
+Test Case 1: Is this a string?
+Test Case 2: What are valid characters?
+Test Case 3: Reverse a sentence, reverse the letters within not the words
+Test Case 4: How to solve in various ways.
+
+*/
+
+// Fastest
+function reverse(str) {
+    return str.split('').reverse().join('')
+}
 
 module.exports = reverse;
