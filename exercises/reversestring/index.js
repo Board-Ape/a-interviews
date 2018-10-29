@@ -16,14 +16,31 @@ Test Case 4: How to solve in various ways.
 
 */
 
-// Iterative Solution: Space 0(n)
+
+
+// Iterative Solution: Time 0(n) Space 0(1)
 function reverse(str) {
-    const result = [];
+    const stringArr = str.split('');
+    const midPoint = Math.floor(str.length/2);
+    let temp;
 
-    str.split('').forEach(letter => result.unshift(letter))
+    for (let i = 0; i < midPoint; i++) {
+        temp = stringArr[i];
+        stringArr[i] = stringArr[stringArr.length - 1 - i];
+        stringArr[stringArr.length - 1 - i] = temp;
+    }
 
-    return result.join('')
+    return stringArr.join('');
 }
+
+// Iterative Solution: Time 0(n) Space 0(n)
+// function reverse(str) {
+//     const result = [];
+
+//     str.split('').forEach(letter => result.unshift(letter))
+
+//     return result.join('')
+// }
 
 // Fastest
 // function reverse(str) {
