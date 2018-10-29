@@ -16,22 +16,28 @@ Test Case 4: How to solve in various ways.
 
 */
 
-
+// Reduce() solution
+function reverse(str) {
+    return str.split('').reduce((acc, iter) => {
+        acc = iter + acc
+        return acc    
+    }, '')
+}
 
 // Iterative Solution: Time 0(n) Space 0(1)
-function reverse(str) {
-    const stringArr = str.split('');
-    const midPoint = Math.floor(str.length/2);
-    let temp;
+// function reverse(str) {
+//     const stringArr = str.split('');
+//     const midPoint = Math.floor(str.length/2);
+//     let temp;
 
-    for (let i = 0; i < midPoint; i++) {
-        temp = stringArr[i];
-        stringArr[i] = stringArr[stringArr.length - 1 - i];
-        stringArr[stringArr.length - 1 - i] = temp;
-    }
+//     for (let i = 0; i < midPoint; i++) {
+//         temp = stringArr[i];
+//         stringArr[i] = stringArr[stringArr.length - 1 - i];
+//         stringArr[stringArr.length - 1 - i] = temp;
+//     }
 
-    return stringArr.join('');
-}
+//     return stringArr.join('');
+// }
 
 // Iterative Solution: Time 0(n) Space 0(n)
 // function reverse(str) {
