@@ -16,9 +16,18 @@ Test Case 4: How to solve in various ways.
 
 */
 
-// Fastest
+// Iterative Solution: Space 0(n)
 function reverse(str) {
-    return str.split('').reverse().join('')
+    const result = [];
+
+    str.split('').forEach(letter => result.unshift(letter))
+
+    return result.join('')
 }
+
+// Fastest
+// function reverse(str) {
+//     return str.split('').reverse().join('')
+// }
 
 module.exports = reverse;
