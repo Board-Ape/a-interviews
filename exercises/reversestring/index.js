@@ -16,13 +16,27 @@ Test Case 4: How to solve in various ways.
 
 */
 
-// Reduce() solution
+// String solution
 function reverse(str) {
-    return str.split('').reduce((acc, iter) => {
-        acc = iter + acc
-        return acc    
-    }, '')
+    let result = '';
+    
+    for (let char of str) {
+        result = char + result;
+    }
+
+    return result;
+
 }
+
+// Map() Solution
+// function reverse(str) {
+//     const result = [];
+
+//     str.split('').map(char => result.unshift(char))
+
+//     return result.join('');
+// }
+
 
 // Iterative Solution: Time 0(n) Space 0(1)
 // function reverse(str) {
