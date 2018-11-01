@@ -11,22 +11,38 @@
 /*
 Things to consider:
     - Which characters to consider?
-        - Includde ' ' and punctuation
+        - Include ' ' and punctuation
     - Should we validate if it's a string?
+    - Capitilization matters?
 */
 
-// First Solution: Iterate half the array forward and back
+// Second Solution: Clean up code from initial
 function palindrome(str) {
-    let counter = str.length - 1; 
-    for (let char of str.split('')) {
-        if (char !== str[counter]) {
+    const strArr = str.split('');
+    const midIndex = Math.floor(strArr.length/2);
+
+    for (let i = 0; i < midIndex; i++) {
+        if (strArr[i] !== strArr[strArr.length - 1 - i]) {
             return false;
         }
-
-        counter--;
     }
 
     return true;
 }
+
+
+// First Solution: Iterate half the array forward and back
+// function palindrome(str) {
+//     let counter = str.length - 1; 
+//     for (let char of str.split('')) {
+//         if (char !== str[counter]) {
+//             return false;
+//         }
+
+//         counter--;
+//     }
+
+//     return true;
+// }
 
 module.exports = palindrome;
