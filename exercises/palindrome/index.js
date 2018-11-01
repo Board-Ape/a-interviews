@@ -15,8 +15,18 @@ Things to consider:
     - Should we validate if it's a string?
 */
 
+// First Solution: Iterate half the array forward and back
 function palindrome(str) {
+    let counter = str.length - 1; 
+    for (let char of str.split('')) {
+        if (char !== str[counter]) {
+            return false;
+        }
 
+        counter--;
+    }
+
+    return true;
 }
 
 module.exports = palindrome;
