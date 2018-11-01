@@ -7,6 +7,16 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+
+/*
+Things to consider:
+    - Which characters to consider?
+        - Includde ' ' and punctuation
+    - Should we validate if it's a string?
+*/
+
+function palindrome(str) {
+
+}
 
 module.exports = palindrome;

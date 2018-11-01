@@ -18,7 +18,7 @@ Test Case 4: How to solve in various ways.
 
 // String solution
 function reverse(str) {
-    let result = '';
+    let result = '';   
     
     for (let char of str) {
         result = char + result;
