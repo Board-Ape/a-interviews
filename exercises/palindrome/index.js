@@ -23,18 +23,18 @@ function palindrome(str) {
 
 
 // Second Solution: Clean up code from initial
-function palindrome(str) {
-    const strArr = str.split('');
-    const midIndex = Math.floor(strArr.length/2);
+// function palindrome(str) {
+//     const strArr = str.split('');
+//     const midIndex = Math.floor(strArr.length/2);
 
-    for (let i = 0; i < midIndex; i++) {
-        if (strArr[i] !== strArr[strArr.length - 1 - i]) {
-            return false;
-        }
-    }
+//     for (let i = 0; i < midIndex; i++) {
+//         if (strArr[i] !== strArr[strArr.length - 1 - i]) {
+//             return false;
+//         }
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
 
 // First Solution: Iterate half the array forward and back
