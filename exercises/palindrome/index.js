@@ -16,6 +16,12 @@ Things to consider:
     - Capitilization matters?
 */
 
+// Thir Solution: Using reverse()
+function palindrome(str) {
+    return str.split('').reverse().join('') === str;
+}
+
+
 // Second Solution: Clean up code from initial
 function palindrome(str) {
     const strArr = str.split('');
