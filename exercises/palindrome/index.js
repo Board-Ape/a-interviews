@@ -7,6 +7,55 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+
+/*
+Things to consider:
+    - Which characters to consider?
+        - Include ' ' and punctuation
+    - Should we validate if it's a string?
+    - Capitilization matters?
+*/
+
+// Fourth Solution: Using every()
+function palindrome(str) {
+    return str.split('').every((char, index) => {
+        return char === str[str.length - 1 - index] 
+    })
+}
+
+// Third Solution: Using reverse()
+// function palindrome(str) {
+//     return str.split('').reverse().join('') === str;
+// }
+
+
+// Second Solution: Clean up code from initial
+// function palindrome(str) {
+//     const strArr = str.split('');
+//     const midIndex = Math.floor(strArr.length/2);
+
+//     for (let i = 0; i < midIndex; i++) {
+//         if (strArr[i] !== strArr[strArr.length - 1 - i]) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
+
+// First Solution: Iterate half the array forward and back
+// function palindrome(str) {
+//     let counter = str.length - 1; 
+//     for (let char of str.split('')) {
+//         if (char !== str[counter]) {
+//             return false;
+//         }
+
+//         counter--;
+//     }
+
+//     return true;
+// }
 
 module.exports = palindrome;
