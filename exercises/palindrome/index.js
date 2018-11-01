@@ -16,10 +16,17 @@ Things to consider:
     - Capitilization matters?
 */
 
-// Thir Solution: Using reverse()
+// Fourth Solution: Using every()
 function palindrome(str) {
-    return str.split('').reverse().join('') === str;
+    return str.split('').every((char, index) => {
+        return char === str[str.length - 1 - index] 
+    })
 }
+
+// Third Solution: Using reverse()
+// function palindrome(str) {
+//     return str.split('').reverse().join('') === str;
+// }
 
 
 // Second Solution: Clean up code from initial
