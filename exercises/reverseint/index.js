@@ -8,6 +8,12 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+// Do we check for valid integers?
+// Do we want to keep negative numbers?
+// Do we want to exclude the zeros when returning?
+
+function reverseInt(n) {
+    return (Math.floor(n.toString().split('').reverse().join('')) * Math.sign(n))
+}
 
 module.exports = reverseInt;
