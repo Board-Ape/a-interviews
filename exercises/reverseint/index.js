@@ -13,7 +13,7 @@
 // Do we want to exclude the zeros when returning?
 
 function reverseInt(n) {
-    return parseInt(n).split('').reverse().join('') * Math.sign(n)
+    return parseInt(parseInt(n).toString().split('').reverse().join('') * Math.sign(n))
 }
 
 module.exports = reverseInt;
