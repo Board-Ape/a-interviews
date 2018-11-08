@@ -17,11 +17,11 @@ Things to consider:
 */
 
 // Fourth Solution: Using every()
-function palindrome(str) {
-    return str.split('').every((char, index) => {
-        return char === str[str.length - 1 - index] 
-    })
-}
+// function palindrome(str) {
+//     return str.split('').every((char, index) => {
+//         return char === str[str.length - 1 - index] 
+//     })
+// }
 
 // Third Solution: Using reverse()
 // function palindrome(str) {
@@ -45,17 +45,17 @@ function palindrome(str) {
 
 
 // First Solution: Iterate half the array forward and back
-// function palindrome(str) {
-//     let counter = str.length - 1; 
-//     for (let char of str.split('')) {
-//         if (char !== str[counter]) {
-//             return false;
-//         }
+function palindrome(str) {
+    let counter = str.length - 1; 
+    for (let char of str.split('')) {
+        if (char !== str[counter]) {
+            return false;
+        }
 
-//         counter--;
-//     }
+        counter--;
+    }
 
-//     return true;
-// }
+    return true;
+}
 
 module.exports = palindrome;
