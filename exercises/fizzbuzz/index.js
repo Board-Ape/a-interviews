@@ -12,6 +12,16 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+// Printing multiples of 3 = "fizz"
+// Printing multiples of 5 = "buzz"
+// Printing multiples of 15 = "fizzbuzz"
+
+// Can we assume that n is a number?
+// Handling for less than 3?
+// Are we taking into consideration negative values as well?
+
+function fizzBuzz(n) {
+
+}
 
 module.exports = fizzBuzz;
