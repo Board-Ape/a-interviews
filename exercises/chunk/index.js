@@ -8,6 +8,14 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+
+// Assumptions: Array is always an array, size is always an integer greater than 0
+// Array - no values within array, number of values is less than the size, is greater
+// Iterate over the array.
+// When iteration max is reached, move to the next position in array
+
+function chunk(array, size) {
+    
+}
 
 module.exports = chunk;
