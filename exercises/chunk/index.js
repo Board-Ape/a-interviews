@@ -14,25 +14,41 @@
 // Iterate over the array.
 // When iteration max is reached, move to the next position in array
 
-function chunk(array, size) {
-    const result = [];
-    let inner = [];
 
-    for (let i = 0; i < array.length; i++) {
-        if (inner.length < size) {
-            inner.push(array[i]);
+function chunk(array, size) {
+    const chunked = [];
+
+    for (let element of array) {
+        const last = chunked[chunked.last - 1];
+
+        if (!last || last.length === size) {
+            chunked.push([element])
         } else {
-            result.push(inner);
-            inner = [];
-            inner.push(array[i]);
+            last.push(element);
         }
     }
-
-    if (inner.length) {
-        result.push(inner);
-    }
-
-    return result;
 }
+
+
+// function chunk(array, size) {
+//     const result = [];
+//     let inner = [];
+
+//     for (let i = 0; i < array.length; i++) {
+//         if (inner.length < size) {
+//             inner.push(array[i]);
+//         } else {
+//             result.push(inner);
+//             inner = [];
+//             inner.push(array[i]);
+//         }
+//     }
+
+//     if (inner.length) {
+//         result.push(inner);
+//     }
+
+//     return result;
+// }
 
 module.exports = chunk;
