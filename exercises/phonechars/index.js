@@ -14,6 +14,10 @@ class LetterCombo {
             3: ['g', 'h', 'i']
         }
 
+        if (!map[num]) {
+            return 'Value not found within map'
+        }
+        
         return map[num];
     }
 }
