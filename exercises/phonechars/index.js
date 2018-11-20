@@ -17,8 +17,26 @@ class LetterCombo {
         if (!map[num]) {
             return 'Value not found within map'
         }
-        
+
         return map[num];
+    }
+
+    getCombos(nums) {
+        let result = [''];
+
+        for (let i = 0; i < nums.split('').length; i++) {
+            let temp = [];
+            const letterArray = this.getLetters(nums[i]);
+            for (let j = 0; j < letterArray.length; j++) {
+                let letterToAdd = letterArray[j];
+                for (let k = 0; k < result.length; k++) {
+                    temp.push(result[k] + letterToAdd);
+                }
+            }
+            result = temp;
+        }
+        
+        return result;
     }
 }
 

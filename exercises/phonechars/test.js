@@ -19,3 +19,24 @@ describe('Get Letter Array', () => {
     });
 });
 
+describe('Get Possible Combinations', () => {
+    test('retrieve all possible letter combinations', () => {
+        const n = new Letters();
+        let letterCombos = n.getCombos('1');
+        expect(letterCombos).toEqual([
+            'a','b','c'
+        ]);
+        letterCombos = n.getCombos('12');
+        expect(letterCombos).toEqual([
+            'ad','bd','cd',
+            'ae','be','ce',
+            'af','bf','cf'
+        ]);
+        letterCombos = n.getCombos('123');
+        expect(letterCombos).toEqual([
+            'adg','bdg','cdg','aeg','beg','ceg','afg','bfg','cfg',
+            'adh','bdh','cdh','aeh','beh','ceh','afh','bfh','cfh',
+            'adi','bdi','cdi','aei','bei','cei','afi','bfi','cfi'
+        ]);
+    })
+})
