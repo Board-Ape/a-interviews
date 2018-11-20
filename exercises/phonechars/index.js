@@ -7,7 +7,15 @@
 */
 
 class LetterCombo {
+    getLetters(num) {
+        const map = {
+            1: ['a', 'b', 'c'],
+            2: ['d', 'e', 'f'],
+            3: ['g', 'h', 'i']
+        }
 
+        return map[num];
+    }
 }
 
 module.exports = {LetterCombo};
