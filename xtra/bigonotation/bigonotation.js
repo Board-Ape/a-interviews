@@ -5,6 +5,8 @@ Big O Notation: How long an algorithm takes to run.
 
 */
 
+// TIME COMPLEXITY
+
 // 0(1) Constant
 function print(items) {
     console.log(items[0]);
@@ -36,3 +38,28 @@ function print(items, basics) {
     basics.forEach(itemOne => itemOne.forEach(itemTwo => console.log(itemTwo)));
 } 
 
+// SPACE COMPLEXITY
+
+// 0(1) Space
+function print(items) {
+    firstItem = items[0];
+
+    for (let item of items) {
+        console.log(firstItem, item)
+    }
+}
+
+// 0(n) Space
+function print(items) {
+    const result = [];
+
+    for (let item of items) {
+        if (item > 5) {
+            result.push(item);
+        }
+    }
+}
+
+// CAVEATS:
+// Big O ignores constants, BUT sometimes constants do matter especially at scale.
+// Premature optimization may lead to readability or coding time issues.
