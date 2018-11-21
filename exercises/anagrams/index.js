@@ -8,6 +8,15 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// Will we always receive a string?
+// - No: Handle error check for non string inputs
+// Will we only be dealing with alphabetical characters a-zA-Z
+// - No: Clean the strings before processing
+// Take into consideration capitilization?
+// - No: Let's lowercase all results
+
+function anagrams(stringA, stringB) {
+
+}
 
 module.exports = anagrams;
