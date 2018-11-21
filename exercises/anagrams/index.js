@@ -16,7 +16,18 @@
 // - No: Let's lowercase all results
 
 function anagrams(stringA, stringB) {
+    if (typeof stringA !== 'string' || typeof stringB !== 'string') {
+        return 'Not valid string inputs';
+    }
 
+    cleanedA = cleanString(stringA).toLowerCase();
+    cleanedB = cleanString(stringB).toLowerCase();
+
+    return cleanedA.split('').sort().join('') === cleanedB.split('').sort().join('');
+}
+
+const cleanString = (string) => {
+    return string.replace(/[^A-Za-z]/g, '');
 }
 
 module.exports = anagrams;
