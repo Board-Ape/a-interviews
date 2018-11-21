@@ -15,16 +15,37 @@
 // Take into consideration capitilization?
 // - No: Let's lowercase all results
 
-function anagrams(stringA, stringB) {
-    if (typeof stringA !== 'string' || typeof stringB !== 'string') {
-        return 'Not valid string inputs';
+const anagrams = (...args) => {
+    cleanedA = cleanString(args[0]).toLowerCase();
+    cleanedB = cleanString(args[1]).toLowerCase();
+
+    const cache = {};
+
+    for (let letter of cleanedA) {
+        !cache[letter] ? cache[letter] = 1 : cache[letter]++;
     }
 
-    cleanedA = cleanString(stringA).toLowerCase();
-    cleanedB = cleanString(stringB).toLowerCase();
+    for (let letter of cleanedB) {
+        if (cache[letter] && cache[letter] !== 0) {
+            cache[letter]--;
+        } else {
+            return false
+        }
+    }
 
-    return cleanedA.split('').sort().join('') === cleanedB.split('').sort().join('');
-}
+    return true
+ }
+
+// function anagrams(stringA, stringB) {
+//     if (typeof stringA !== 'string' || typeof stringB !== 'string') {
+//         return 'Not valid string inputs';
+//     }
+
+//     cleanedA = cleanString(stringA).toLowerCase();
+//     cleanedB = cleanString(stringB).toLowerCase();
+
+//     return cleanedA.split('').sort().join('') === cleanedB.split('').sort().join('');
+// }
 
 const cleanString = (string) => {
     return string.replace(/[^A-Za-z]/g, '');
