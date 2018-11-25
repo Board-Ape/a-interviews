@@ -15,7 +15,7 @@
 function capitalize(str) {
     if (typeof str !== 'string') {
         return "Input is NOT a string";
-    }
+    } else if (!str || )
 }
 
 module.exports = capitalize;
