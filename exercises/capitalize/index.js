@@ -12,10 +12,25 @@
 // Can we assume there are always characters present?
 // No: Error Handle for empty string
 
+
 function capitalize(str) {
-    if (typeof str !== 'string') {
+    if (typeof str !== 'string' || !str.length) {
         return "Input is NOT a string";
-    } else if (!str || )
+    }
+
+    str = str.split('');
+
+    for (let i = 0; i < str.length; i++) {
+        if (i === 0) {
+            str[0] = str[0].toUpperCase();
+        }
+
+        if (str[0] === ' ') {
+            str[i+1] = str[i+1].toUpperCase();
+        }
+    }
+
+    return str.join('')
 }
 
 module.exports = capitalize;
