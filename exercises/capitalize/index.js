@@ -15,7 +15,20 @@
 function capitalize(str) {
     if (typeof str !== 'string') {
         return "Input is NOT a string";
-    } else if (!str || )
+    }
+
+    str = str.split('');
+    for (let i = 0; i < str.length; i++) {
+        if (i === 0) {
+            str[i] = str[i].toUpperCase();
+        }
+
+        if (str[i] === ' ') {
+            str[i+1] = str[i+1].toUpperCase();
+        }
+    }
+
+    return str.join('');
 }
 
 module.exports = capitalize;
