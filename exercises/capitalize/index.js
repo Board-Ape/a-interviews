@@ -13,14 +13,28 @@
 // No: Error Handle for empty string
 
 const capitalize = (str) => {
-    const words = [];
+    let result = str[0].toUpperCase();
 
-    for (let word of str.split(' ')) {
-        words.push(word[0].toUpperCase() + word.slice(1));
+    for (let i = 1; i < str.length; i++) {
+        if (str[i-1] === ' ') {
+            result += str[i].toUpperCase();
+        } else {
+            result += str[i];
+        }
     }
 
-    return words.join(' ');
+    return result;
 }
+
+// const capitalize = (str) => {
+//     const result = [];
+
+//     for (let char of str.split(' ')) {
+//         result.push(char[0].toUpperCase() + char.slice(1));
+//     }
+
+//     return result.join(' ');
+// }
 
 // function capitalize(str) {
 //     if (typeof str !== 'string') {
@@ -30,7 +44,7 @@ const capitalize = (str) => {
 //     str = str.split('');
 //     for (let i = 0; i < str.length; i++) {
 //         if (i === 0) {
-//             str[i] = str[i].toUpperCase();
+//             str[i] = str[i].toUppc         erCase();
 //         }
 
 //         if (str[i] === ' ') {
