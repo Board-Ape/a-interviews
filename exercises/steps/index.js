@@ -22,22 +22,24 @@
 // Are we testing the input we receive is always a whole number integer?
 // No: Errpr handle that
 
-function steps(n) {
-    if (!n || typeof n !== 'number' || n < 1) {
-        return "Invalid number input";
-    }
+// Attempting am recursive solution
 
-    for (let row = 0; row < n; row++) {
-        let line = '';
-        for (let column = 0; column < n; column++) {
-            if (column <= row) {
-                line += '#';
-            } else {
-                line += ' ';
-            }
-        }
-        console.log(line);
-    }
-}
+// function steps(n) {
+//     if (!n || typeof n !== 'number' || n < 1) {
+//         return "Invalid number input";
+//     }
+
+//     for (let row = 0; row < n; row++) {
+//         let line = '';
+//         for (let column = 0; column < n; column++) {
+//             if (column <= row) {
+//                 line += '#';
+//             } else {
+//                 line += ' ';
+//             }
+//         }
+//         console.log(line);
+//     }
+// }
 
 module.exports = steps;
