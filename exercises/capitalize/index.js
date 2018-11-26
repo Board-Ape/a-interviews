@@ -12,23 +12,33 @@
 // Can we assume there are always characters present?
 // No: Error Handle for empty string
 
-function capitalize(str) {
-    if (typeof str !== 'string') {
-        return "Input is NOT a string";
+const capitalize = (str) => {
+    const words = [];
+
+    for (let word of str.split(' ')) {
+        words.push(word[0].toUpperCase() + word.slice(1));
     }
 
-    str = str.split('');
-    for (let i = 0; i < str.length; i++) {
-        if (i === 0) {
-            str[i] = str[i].toUpperCase();
-        }
-
-        if (str[i] === ' ') {
-            str[i+1] = str[i+1].toUpperCase();
-        }
-    }
-
-    return str.join('');
+    return words.join(' ');
 }
+
+// function capitalize(str) {
+//     if (typeof str !== 'string') {
+//         return "Input is NOT a string";
+//     }
+
+//     str = str.split('');
+//     for (let i = 0; i < str.length; i++) {
+//         if (i === 0) {
+//             str[i] = str[i].toUpperCase();
+//         }
+
+//         if (str[i] === ' ') {
+//             str[i+1] = str[i+1].toUpperCase();
+//         }
+//     }
+
+//     return str.join('');
+// }
 
 module.exports = capitalize;
