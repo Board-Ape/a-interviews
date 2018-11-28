@@ -9,9 +9,43 @@
 // 3) Implement 'traverseBF' and 'traverseDF'
 // on the tree class.  Each method should accept a
 // function that gets called with each element in the tree
+/*
 
-class Node {}
+            20
+         /  |   \
+        0   40  -15
+      / | \       |
+    12  -2  1    -2
 
-class Tree {}
+ */
+
+// Breadth-First Traversal 
+    // It's similar to a level traversal
+    // [20,0,40,-15,12,-2,1,-2]
+
+// Depth-First Traversal
+    // Deep dive as quickly as possible
+    // [20,0,12,-2,1,40,-15,-2]
+
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.children = [];
+    }
+
+    add(data) {
+        this.children.push(new Node(data));
+    }
+
+    remove(data) {
+        this.children = this.children.filter(node => {
+            return node.data !== data;
+        });
+    }
+}
+
+class Tree {
+
+}
 
 module.exports = { Tree, Node };
