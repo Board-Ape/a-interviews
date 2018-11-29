@@ -29,7 +29,7 @@ describe('Node', () => {
   });
 });
 
-describe.skip('Tree', () => {
+describe('Tree', () => {
   test('starts empty', () => {
     const t = new Tree();
     expect(t.root).toEqual(null);
@@ -65,3 +65,5 @@ describe.skip('Tree', () => {
     expect(letters).toEqual(['a', 'b', 'c', 'd']);
   });
 });
+
+// Understand that this isn't counting, it's sending that information into the function.
