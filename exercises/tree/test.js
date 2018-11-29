@@ -65,3 +65,5 @@ describe('Tree', () => {
     expect(letters).toEqual(['a', 'b', 'c', 'd']);
   });
 });
+
+// Understand that this isn't counting, it's sending that information into the function.
