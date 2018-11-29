@@ -60,8 +60,14 @@ class Tree {
 
     }
 
-    traverseDF() {
+    traverseDF(fn) {
+        const result = [ this.root ];
 
+        while (result.length) {
+            const node = result.shift(); 
+            result.unshift(...node.children);
+            fn(node);
+        }
     }
 }
 
