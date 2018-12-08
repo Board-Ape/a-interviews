@@ -45,7 +45,23 @@ class Node {
 }
 
 class Tree {
+    constructor() {
+        this.root = null;
+    }
 
+    traverseBF(fn) {
+        const result = [ this.root ];
+
+        while(result.length) {
+            const current = result.shift();
+            result.push(...current.children);
+            fn(current)
+        }
+    }
+
+    traverseDF() {
+
+    }
 }
 
 
