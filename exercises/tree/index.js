@@ -49,20 +49,87 @@ class Tree {
         this.root = null;
     }
 
+    // Notice the similarity of a simplified data structure
+    // This utilizes an array and forces a queue approach
+    // Having a queue simulates a breadth first approach
     traverseBF(fn) {
         const result = [ this.root ];
 
-        while(result.length) {
+        while (result.length) {
             const current = result.shift();
             result.push(...current.children);
             fn(current)
         }
     }
 
-    traverseDF() {
+    traverseDF(fn) {
+        const result = [ this.root ];
 
+        while (result.length) {
+            const current = result.shift();
+            result.unshift(...current.children);
+            fn(current);
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//class Tree {
+//    constructor() {
+//        this.root = null;
+//    }
+//
+//    traverseBF(fn) {
+//        const result = [ this.root ];
+//
+//        while (result.length) {
+//            const current = result.shift();
+//            result.push(...current.children);
+//            fn(current)
+//        }
+//    }
+//
+//    traverseDF(fn) {
+//        const result = [ this.root ];
+//
+//        while (result.length) {
+//            const current = result.shift();
+//            result.unshift(...current.children);
+//            fn(current);
+//        }
+//    }
+//}
 
 
 
