@@ -62,6 +62,12 @@ class Tree {
         }
     }
 
+    // Similar to a stack data structure
+    // Take the left or start index element within the array
+    // Process whether there are any children within that node
+    // If not the next element to process is a sibling and if that doesn't
+    // exist than you have to continue traveling upward
+    // By creating and using an array as a data structure we replicate this.
     traverseDF(fn) {
         const result = [ this.root ];
 
@@ -72,36 +78,6 @@ class Tree {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -130,46 +106,6 @@ class Tree {
 //        }
 //    }
 //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //class Node {
 //    constructor(data) {
